@@ -1,0 +1,3 @@
+#Use Case - Find out malicious powershell module loaded in non standard process
+
+Get-Process | Where {$_.modules -like "*system.management.automation*"}| Where {$_.ProcessName -ne "powershell"} | select name,id,modules | fl

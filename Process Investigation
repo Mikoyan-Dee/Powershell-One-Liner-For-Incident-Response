@@ -1,4 +1,4 @@
-#Child & Parent Process Relationship
+#Use Case - Child & Parent Process Relationship Investigation, ID: T1055.012
 Get-WmiObject -class win32_process |select name,ProcessID,ParentProcessID,@{e={$_.GetOwner().User}}                          #finding process with ID,ParentID,associated_user
 Get-WmiObject -Class Win32_Process |select-object PSComputerName,name,parentprocessid,executablepath                         #finding process with executablepath
 Get-WmiObject -Class Win32_Process -filter "name='svchost.exe'" |select-object parentprocessid,executablepath,commandline    #svchost process investigation

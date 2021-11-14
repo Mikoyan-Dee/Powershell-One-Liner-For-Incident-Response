@@ -1,0 +1,3 @@
+#Use Case - Detection of Malicious Scheduled Task, ID: T1053
+
+Get-ScheduledTask | Where {$_.State -eq "Running"} | Select-Object TaskName, TaskPath, State, Date, Author | Where {$_.Author -ne "Microsoft"} | Where {$_.Author -ne $null}

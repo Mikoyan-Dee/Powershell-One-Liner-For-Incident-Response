@@ -54,6 +54,7 @@ FF D8 FF E8 (in first byte) - JPG
 %PDF-1.0  (in first byte) - PDF file
 25 50 44 46 - %PDF
 ```
+Command
 ```
 Format-Hex -Path .\file.file
 ```

@@ -1,3 +1,0 @@
-#Use Case - Detection of Hiding Artifacts with Alternate Data Streams, ID: T1564.004
-
-Get-Item .\file.txt -Stream * | where Stream -ne ':$DATA' |select-object PSChildName

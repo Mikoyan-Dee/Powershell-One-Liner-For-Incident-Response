@@ -39,17 +39,21 @@ Get-ScheduledTask | Where {$_.State -eq "Running"} | Select-Object TaskName, Tas
 Use Case - Identify the correct file signature to spot masquerading.
 
 #JPG Signature
+```
 FF D8 FF E0 (in first byte) - JPG 
 FF D8 FF E1 (in first byte) - JPG
 FF D8 FF E2 (in first byte) - JPG
 FF D8 FF E8 (in first byte) - JPG
-
+```
 #Executable_File Signature
+```
 4D 5A (MZ in first byte) - Executable File Window
-
+```
 #PDF Signature
+```
 %PDF-1.0  (in first byte) - PDF file
 25 50 44 46 - %PDF
+```
 ```
 Format-Hex -Path .\file.file
 ```
